@@ -7,7 +7,7 @@ In this repository I want to collect my recent learnings on bats-core and bats-m
 
 My blogpost about bats-core on my [blog](https://blog.philippludewig.de/de/writing/lets-test-bash-scripts).
 
-My blogpost about bats-mock on my (blog)[]
+My blogpost about bats-mock on my (blog)[https://blog.philippludewig.de/de/writing/lets-assert-and-stub-for-bash-scripts]
 
 ## Docker 
 
