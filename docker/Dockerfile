@@ -11,6 +11,7 @@ RUN git init -q && \
     git submodule add https://github.com/bats-core/bats-core.git bats && \
     git submodule add https://github.com/bats-core/bats-support.git test_helper/bats-support && \
     git submodule add https://github.com/bats-core/bats-assert.git test_helper/bats-assert && \
+    git submodule add https://github.com/bats-core/bats-file.git test_helper/bats-file && \
     git submodule add https://github.com/grayhemp/bats-mock.git test_helper/bats-mock
 
 RUN cd /test_frameworks/bats && \
