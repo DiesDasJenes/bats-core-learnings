@@ -1,6 +1,7 @@
 # I found this way to mock/stub at github: https://github.com/endreymarcell/spoon
 
 setup() {
+	# I always load everything
     load /test_frameworks/test_helper/bats-support/load
     load /test_frameworks/test_helper/bats-assert/load
     load /test_frameworks/test_helper/bats-file/load
