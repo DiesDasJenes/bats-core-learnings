@@ -31,9 +31,11 @@ date() {
     assert_output "222"
 }
 
-@test 'Stub date so its returning different values on two calls with side effects' {
+@test 'Stub date so it behaves differently on three calls' {
+    # Just wanna show we can inject values into the side effect string
+    temp_dir=$(mktemp -d)
 	mock_set_output "${mock_date_path}" "111" 1
-    mock_set_side_effect "${mock_date_path}" "touch /tmp/someFile" 2
+    mock_set_side_effect "${mock_date_path}" "touch $temp_dir/someFile" 2
     mock_set_output "${mock_date_path}" "222" 3
 
     run date 
@@ -42,11 +44,11 @@ date() {
 
     run date 
 
-    assert_file_exists "/tmp/someFile"
+    assert_file_exists "$temp_dir/someFile"
 
     run date 
 
     assert_output "222"
 
-    rm "/tmp/someFile"
+    rm "$temp_dir/someFile"
 }
